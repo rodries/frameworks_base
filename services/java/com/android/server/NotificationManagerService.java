@@ -1190,9 +1190,6 @@ public class NotificationManagerService extends INotificationManager.Stub
 				// Depending on ROMControl "Screen ON flash" flag
         if (mLedNotification == null || mInCall || (mScreenOn && !ledScreenOn)
                 || (inQuietHours() && mQuietHoursDim)  || (wasScreenOn && !forceWithScreenOff)) {
-//=======
-//        if (mInCall || mScreenOn || (wasScreenOn && !forceWithScreenOff)) {
-//>>>>>>> 5713307... NotificationManagerService: Fix notification led bug
             mNotificationLight.turnOff();
         } else {
             int ledARGB = mLedNotification.notification.ledARGB;
